@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Backgrounds -->
+    <color name="bg_main">#F5F7FB</color>
+    <color name="card_bg">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_title">#222222</color>
+    <color name="text_sub">#777777</color>
+
+
+        <color name="bg">#F7F8FC</color>
+        <color name="primary">#6C63FF</color>
+        <color name="primary_dark">#4F46E5</color>
+        <color name="text_main">#111827</color>
+
+    <!-- Buttons -->
+    <color name="btn_main">#5C6BC0</color>
+    <color name="btn_main_text">#FFFFFF</color>
+    <color name="btn_danger">#EF5350</color>
+    <color name="bg_start">#F5F7FB</color>
+    <color name="bg_end">#EEF2FF</color>
+    <color name="blue">#2979FF</color>
+    <color name="whitee">#EFEBEB</color>
+<color name="red">#A23236</color>
+</resources>

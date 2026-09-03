@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAbout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_notifications"
+                android:contentDescription="App Icon"/>
+
+            <!-- اسم التطبيق -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DailyDose"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_title"
+                android:layout_marginTop="16dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="تطبيق DailyDose هو مساعدك اليومي الذكي الذي يساعدك على الالتزام بمواعيد أدويتك بكل سهولة وراحة.
+
+يهدف التطبيق إلى تنظيم أوقات العلاج وتقليل نسيان الجرعات، مع تقديم تجربة استخدام بسيطة وهادئة تناسب جميع الأعمار.
+
+تم تصميم DailyDose بعناية ليكون رفيقك الموثوق في رحلتك الصحية."
+                android:textSize="16sp"
+                android:textColor="@color/text_sub"
+                android:lineSpacingExtra="6dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• تنبيهات دقيقة في الوقت المناسب
+• واجهة سهلة وبسيطة
+• تنظيم مرن لمواعيد الأدوية
+• مناسب لجميع الأعمار"
+                android:textSize="15sp"
+                android:textColor="@color/text_title"
+                android:lineSpacingExtra="6dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تصميم وبرمجة: Mohammed"
+                android:textSize="14sp"
+                android:textColor="@color/text_sub"
+                android:layout_marginTop="24dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mohammedabdllaabdan77@gmail.com"
+                android:textSize="13sp"
+                android:textColor="@color/primary"
+                android:layout_marginTop="6dp"/>
+
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="رجوع"
+                android:textSize="15sp"
+                android:textColor="@color/btn_main_text"
+                android:backgroundTint="@color/btn_main"
+                app:cornerRadius="24dp"
+                android:layout_marginTop="28dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

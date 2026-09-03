@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6FA"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اختر نغمة التنبيه"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbSoft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="نغمة هادئة"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_input_gray"
+            android:buttonTint="#4A6CF7"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="منبه كلاسيكي"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_input_gray"
+            android:buttonTint="#4A6CF7"/>
+
+        <RadioButton
+            android:id="@+id/rbNature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="أصوات الطبيعة"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_input_gray"
+            android:buttonTint="#4A6CF7"/>
+
+        <RadioButton
+            android:id="@+id/rbStrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تنبيه قوي"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_input_gray"
+            android:buttonTint="#4A6CF7"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnNextSound"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="تأكيد"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:backgroundTint="#4A6CF7"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

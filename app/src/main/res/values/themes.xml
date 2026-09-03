@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+      <style name="Base.Theme.DailyDoes" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.DailyDoes" parent="Base.Theme.DailyDoes" />
+</resources>

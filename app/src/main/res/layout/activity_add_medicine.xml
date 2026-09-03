@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img4"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_back"
+                    android:tint="@android:color/widget_edittext_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="إضافة دواء جديد"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="16dp"/>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etName"
+                android:hint="اسم الدواء"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_input_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etDose"
+                android:hint="الجرعة (مثال: نصف حبة)"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_input_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/etStartDate"
+                android:hint="تاريخ بدء الاستخدام"
+                android:focusable="false"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_input_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/btnAddTime"
+                android:text="إضافة وقت جرعة"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#4A6CF7"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/llTimesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"/>
+
+            <!-- ملاحظات -->
+            <EditText
+                android:id="@+id/etNotes"
+                android:hint="ملاحظات (اختياري)"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@drawable/bg_input_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:text="حفظ الدواء"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#4A6CF7"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

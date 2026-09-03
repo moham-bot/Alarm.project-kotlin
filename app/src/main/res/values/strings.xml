@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DailyDose</string>
+    <string name="app_subtitle">Medication Reminder</string>
+
+    <string name="login">Login</string>
+    <string name="guest">Continue as Guest</string>
+    <string name="about_app">About App</string>
+    <string name="app_icon_desc">أيقونة التطبيق</string>
+
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+
+    <!-- ===== Header ===== -->
+    <!-- ===== Header ===== -->
+    <!-- ===== Header ===== -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="0dp"
+        android:layout_marginBottom="-30dp"> <!-- Negative margin for overlap effect if desired, but sticking to clean -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- صورة الخلفية -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img4"
+                android:scaleType="centerCrop"/>
+                
+            <!-- تظليل متدرج للأناقة -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#40000000"/>
+            
+            <!-- زر الإعدادات -->
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_settings"
+                app:tint="@android:color/white"
+                android:background="@drawable/bg_input_gray"
+                android:backgroundTint="#20FFFFFF" 
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"/>
+
+            <!-- نص الترحيب ومحتوى الهيدر -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مرحباً بك"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+                    
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نتمنى لك دوام الصحة والعافية"
+                    android:textColor="#F0F0F0"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ===== Container for Content ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_main" 
+        android:backgroundTint="#F5F6FA"
+        android:elevation="0dp"> 
+        <!-- Note: bg_main might be a shape, using plain color or drawable here -->
+        
+        <!-- ===== عنوان وزر الصوت ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="12dp">
+
+            <!-- زر تغيير الصوت -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnChangeSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_input_gray"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_sound" 
+                    app:tint="#4A6CF7"/> 
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الصوت"
+                    android:textSize="14sp"
+                    android:textColor="#4A6CF7"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قائمة الأدوية"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <!-- ===== قائمة الأدوية ===== -->
+        <ListView
+            android:id="@+id/listMedicines"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"/>
+
+        <!-- ===== زر إضافة (Gradient) ===== -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="إضافة دواء جديد"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_gradient_blue"
+                android:elevation="6dp"
+                android:stateListAnimator="@null"/> 
+                <!-- Using AppCompatButton to easily apply drawable background without tint issues -->
+        </FrameLayout>
+
+        <!-- ===== Bottom Menu ===== -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:itemIconTint="#4A6CF7"
+            app:itemTextColor="#4A6CF7"
+            app:elevation="16dp"
+            app:menu="@menu/menu_bottom"/>
+            <!-- Note: ItemIconTint usually needs a selector, but using gradient here might not work as intended for tint. 
+                 Reverting to simpler styling or default if needed. Keeping it simple. -->
+
+    </LinearLayout>
+
+</LinearLayout>
